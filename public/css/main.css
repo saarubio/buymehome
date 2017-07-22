@@ -1,0 +1,141 @@
+h1.main-title {margin:auto;}
+.orange-grad 
+{
+	background: -moz-linear-gradient(top,  #ffc578 0%, #fb9d23 100%); 
+	background: -webkit-linear-gradient(top,  #ffc578 0%,#fb9d23 100%); 
+	background: linear-gradient(to bottom,  #ffc578 0%,#fb9d23 100%); 
+	-webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.34);
+	-moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.34);
+	box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.34);
+	position:relative;
+}
+.small-container
+{
+	background-color: #e1e1e1;
+	padding:20px;
+}
+
+.margin-top {margin-top:10px;}
+.no-margins {margin:0 !important;}
+.no-padding {padding:0 !important;}
+.row.task-row
+{
+	background-color:#f3f6e3;
+	padding:15px;
+
+}
+.row.task-row:nth-child(odd)
+{
+	background-color:#fff !important;	
+
+}
+
+
+/*
+* Inputs
+*/
+.input , .button  {width:100%;padding:10px;background-color: #fff;width:95%;border-radius:2px;border: solid 1px #e1e1e1}
+.input.editable {
+	border-color:transparent;
+	background-color: transparent;
+}
+.button {cursor:pointer;font-weight: bold;}
+input[type=checkbox] {
+    position: relative;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+input[type=checkbox]:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0px;
+    visibility: visible;
+    
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    background: #e1e1e1;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked:after {
+    content: "\2713";
+    background: #0a0;
+}
+/*
+* ICONS
+*/
+.icon {
+position: relative;
+width:32px;
+height:32px;
+margin:auto;
+}
+
+.icon-box {
+
+	padding:3px;
+	background-color: #e1e1e1;
+	height:38px;
+	width:38px;
+	border-radius: 4px;
+	border:solid 1px #fff;
+	float: left !important;
+}
+.icon-plus.delete 
+{
+	transform: rotate(45deg);
+	border:none;
+	background-color:transparent;
+	cursor:pointer;
+} 
+.icon-plus {
+border:solid 1px #666;
+background-color: #e1e1e1;
+border-radius:18px;
+-webkit-border-radius:18px;
+-moz-border-radius:18px;
+width: 32px;
+height: 32px;
+position: relative;
+top:0;
+left:0;
+}
+.icon-plus:after {
+background-color: #666;
+width: 18px;
+height: 2px;
+border-radius: 1px;
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
+position: absolute;
+top:14px;
+left: 6px;
+  content:"";
+}
+.icon-plus:before {
+background-color: #666;
+width: 2px;
+height: 16px;
+border-radius: 1px;
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
+position: absolute;
+top:8px;
+left: 13px;
+  content:"";
+}
+
+
+
+
+
+
+
