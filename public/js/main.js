@@ -19,17 +19,6 @@ Tasks.TasksIndexRoute = Ember.Route.extend({
         return this.store.find('task');
     }
 });
-Handlebars.registerHelper('count', function (key) {
-
-    bool_flag = (key == 'done') ? true : false;
-    var counter = 0;
-    var tasks = this.store.filter('task', function (task) {
-        if(task.get('done') == bool_flag) counter++;
-    });
-      return new Handlebars.SafeString(
-         "" + counter
-      );
-});   
 
 
 

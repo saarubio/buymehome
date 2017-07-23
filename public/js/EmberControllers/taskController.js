@@ -14,7 +14,7 @@ Tasks.TasksCreateController = Ember.ArrayController.extend({
             });
             tasks.save();
             this.set('task_name', '');
-            this.transitionTo('tasks');
+            this.transitionToRoute();
         },
     },
 });
@@ -28,6 +28,8 @@ Tasks.TaskController = Ember.ObjectController.extend({
         {
              task.set(key, value);
              task.save();
+             this.parentController.notifyPropertyChange('donetasks');
+             this.parentController.notifyPropertyChange('opentasks');
              return value; 
          }
          return task.get('done');
@@ -38,10 +40,28 @@ Tasks.TaskController = Ember.ObjectController.extend({
 
 Tasks.TasksIndexController = Ember.ArrayController.extend({
     current_record:{},
+    donetasks:function() {
+        var counter = 0;
+        var tasks = this.store.filter('task', function (task) {
+            if(task.get('done') == true) counter++;
+        });
+        return counter;
+
+    }.property("tasks.model"),
+    opentasks:function() {
+        var counter = 0;
+        var tasks = this.store.filter('task', function (task) {
+            if(task.get('done') == false) counter++;
+        });
+        return counter;
+    }.property("tasks.model"),
     actions: {
         DeleteTask: function (record) {
             record.deleteRecord()
             record.save();
+             this.notifyPropertyChange('donetasks');
+             this.notifyPropertyChange('opentasks');
+
         },
         Edit: function(record) {
 

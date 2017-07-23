@@ -61,10 +61,10 @@
     {{/each}}	
     <div class='row'>
 		<div class="col-md-3">
-		 {{count 'notdone'}} לסיום
+		 {{opentasks}} לסיום
 		</div>
 		<div class="col-md-3">
-		 {{count 'done'}} הושלמו
+		 {{donetasks}} הושלמו
 		</div>
 		<div class="col-md-3">
 			סה״כ:{{length}}
