@@ -23,7 +23,7 @@
 <script src="/js/EmberModels/TaskModel.js"></script>
 <script src="/js/EmberControllers/taskController.js"></script>
 
-<script type="text/x-handlebars" ∂>
+<script type="text/x-handlebars" id="tasks">
 	<div class="row orange-grad no-margins">
 		<h4  class="col-md-6">משימות</h4>
 		<div class="col-md-4"></div>
@@ -37,11 +37,6 @@
 </div>
 </script>
 
-<script type="text/x-handlebars" id="tasks">
-    <div class="main">
- 		 {{outlet}}
-    </div>
-</script>
 
 <script type="text/x-handlebars" data-template-name="tasks/index" >
     
